@@ -1,0 +1,49 @@
+<div fxLayout="column" style="margin: 5px">
+
+  <div fxLayout="row" *ngIf="(manga | async) as Manga">
+    <mat-card class="example-card" style="width: 20%">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{Manga.title}}</mat-card-title>
+        <mat-card-subtitle>{{Manga.alternative}}</mat-card-subtitle>
+      </mat-card-header>
+      <div fxLayoutAlign="center center">
+        <img src="{{Manga.img}}" style="width: 100%;border-radius: 5px;">
+      </div>
+    </mat-card>
+  </div>
+
+  <div>
+
+    <mat-form-field>
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="42">
+    </mat-form-field>
+
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+      <!-- Number Column -->
+      <ng-container matColumnDef="number">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+      </ng-container>
+
+      <!-- View Column -->
+      <ng-container matColumnDef="view">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> View </th>
+        <td mat-cell *matCellDef="let element"> {{element.view}} </td>
+      </ng-container>
+
+      <!-- Uploaded Column -->
+      <ng-container matColumnDef="uploaded">
+        <th mat-header-cell *matHeaderCellDef> Uploaded </th>
+        <td mat-cell *matCellDef="let element"> {{element.uploaded}} </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  </div>
+</div>

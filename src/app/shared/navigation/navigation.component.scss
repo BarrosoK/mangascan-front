@@ -1,0 +1,118 @@
+@import '../../../colors';
+
+//css déjà existant
+.sidenav-container {
+  height: calc(100vh - 64px);
+}
+
+.navigation-container {
+  background: linear-gradient(165deg, $dark-blue, $dark-purple);
+  height: 100%;
+}
+
+.sidenav {
+  position: relative;
+  height: calc(100vh - 64px);
+  min-width: 50px;
+  background: transparent;
+  color: white;
+  border-right: 0;
+}
+
+.sidenav-mobile {
+  width: 300px;
+  background: linear-gradient(165deg, $dark-blue, $dark-purple);
+  color: white;
+  border-right: 0;
+}
+
+.sidenav-container,
+.mat-sidenav {
+  background: linear-gradient(to bottom, $dark-blue, #3c2b5d);
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.menu-icon {
+  padding-right: 10px;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.navigation-toolbar {
+  padding: 0;
+  background: transparent;
+}
+
+.navigation-content {
+  background: linear-gradient(rgba(62, 61, 63, 0.95), rgba(13, 12, 15, 0.98)) no-repeat center fixed;
+  background-size: cover;
+  border-radius: 5px;
+  height: calc(100%);
+}
+
+.navigation-item {
+  font-family: 'Proxima Nova';
+  color: white;
+}
+
+.welcome {
+  padding: 10px;
+}
+
+.welcome-logo {
+  float: left;
+}
+
+.mat-divider {
+  border-top-color: $light-gray;
+  width: 80%;
+}
+
+.sidenav-content {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-back {
+  background: linear-gradient(to right, $dark-blue 25%, $dark-purple);
+}
+
+.link-home {
+  cursor: pointer;
+}
+
+.menu-text {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 245px;
+  overflow: hidden;
+}
+
+.sidenav-navigation {
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.toggle-reduce {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+}

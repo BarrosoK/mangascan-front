@@ -1,0 +1,23 @@
+<div *ngIf="chapterImages | async as Chapter" fxLayout="column">
+
+  <div style="margin-top: 50px;" fxLayoutAlign="center center" fxLayout="row">
+    <button mat-stroked-button (click)="previousChapter()">Previous</button>
+    <mat-slider
+      #slider
+      style="width: 25%"
+      class="example-margin"
+      [max]="100"
+      [min]="1"
+      [value]="imgSize"
+      [thumbLabel]="true"
+      [(ngModel)]="imgSize">
+    </mat-slider>
+    <button mat-stroked-button (click)="nextChapter()">Next</button>
+
+  </div>
+
+  <div *ngFor="let img of Chapter; let index = index; let isFirst = first; let isOdd = odd;" fxLayoutAlign="center center">
+    <img src="{{img}}" [style.width.%]="slider.value">
+  </div>
+
+</div>
