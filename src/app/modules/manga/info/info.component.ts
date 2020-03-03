@@ -20,8 +20,9 @@ export class InfoComponent implements OnInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   id: string;
+  imgNumber  = 0;
   manga: Observable<Manga>;
-  displayedColumns: string[] = ['number', 'view', 'uploaded'];
+  displayedColumns: string[] = ['number', 'view', 'uploaded', 'read'];
   dataSource;
 
   constructor(private route: ActivatedRoute, private router: Router, private mangaService: MangaService) {
@@ -30,12 +31,18 @@ export class InfoComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params.id;
     this.manga = this.mangaService.getMangaInfo(this.id);
-    this.manga.subscribe(res => {
+    this.manga.subscribe((res: any) => {
       this.dataSource = new MatTableDataSource(res.chapters);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
+      this.imgNumber = this.getRandomId(res.backgroundImgUrl.length);
     });
   }
+
+  getRandomId(max: number) {
+    return Math.floor((Math.random()*max));
+  }
+
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
@@ -46,4 +53,7 @@ export class InfoComponent implements OnInit {
     }
   }
 
+  read(number: number) {
+    this.router.navigateByUrl(`/manga/chapter/${this.id}/${number}`);
+  }
 }

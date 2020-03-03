@@ -10,23 +10,26 @@ import {AuthModule} from './modules/auth/auth.module';
 import {MangaModule} from './modules/manga/manga.module';
 import {HttpClientModule} from '@angular/common/http';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { FilterPipe } from './shared/pipes/filter.pipe';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AuthModule,
-    MangaModule,
-    HttpClientModule,
-    AppRoutingModule,
-    SharedModule,
-    BrowserAnimationsModule,
-    FlexLayoutModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AuthModule,
+        MangaModule,
+        HttpClientModule,
+        AppRoutingModule,
+        SharedModule,
+        BrowserAnimationsModule,
+        FlexLayoutModule
+    ],
+    providers: [],
+    exports: [
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

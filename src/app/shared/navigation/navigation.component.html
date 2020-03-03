@@ -61,10 +61,7 @@
               fxLayout="row"
               fxLayoutAlign="start center"
             >
-              <mat-icon *ngIf="!item.srcSvg || item.srcSvg === ''" class="menu-icon mat-icon-outlined">{{
-                item.icon
-                }}</mat-icon>
-              <img *ngIf="item.srcSvg && item.srcSvg !== ''" [src]="item.srcSvg" class="menu-icon" />
+              <i class="fas {{item.icon}} ml-3" aria-hidden="true"></i>
               <span [@animateText]="linkText ? 'show' : 'hide'" class="menu-text">{{ item.title  }}</span>
             </a>
           </mat-nav-list>
@@ -75,7 +72,7 @@
         </button>
       </div>
     </mat-sidenav>
-    <mat-sidenav-content class="navigation-content" [@onMainContentChange]="sideNavState ? 'open' : 'close'">
+    <mat-sidenav-content class="navigation-content smooth-scroll scrollbar scrollbar-morpheus-den " [@onMainContentChange]="sideNavState ? 'open' : 'close'" >
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>

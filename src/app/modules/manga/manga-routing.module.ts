@@ -7,7 +7,7 @@ import {ChapterComponent} from './chapter/chapter.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'list',
     component: ListComponent
   },
   {
@@ -17,7 +17,7 @@ const routes: Routes = [
   {
     path: 'chapter/:id/:chapter',
     component: ChapterComponent
-  }
+  },
 ];
 
 @NgModule({

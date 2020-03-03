@@ -29,11 +29,13 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 
 const materialItems = [
   LayoutModule,
   MatToolbarModule,
+  ScrollingModule,
   MatButtonModule,
   MatSidenavModule,
   DragDropModule,

@@ -56,24 +56,23 @@ export class NavigationComponent implements OnInit {
 
   async ngOnInit() {
 
-    this.addITemToMenuIfNotAlreadyExist('MENU.HOME', 'home', '', '/home');
     this.addITemToMenuIfNotAlreadyExist(
-      'MENU.CALENDAR_ADMIN',
-      'event',
+      'login',
+      'fa-sign-in-alt',
       '../../../../assets/icons/calendrier admin.svg',
       '/auth/login',
     );
     this.addITemToMenuIfNotAlreadyExist(
       'Manga',
-      'event',
+      'fa-book',
       '../../../../assets/icons/calendrier admin.svg',
       '/manga/list',
     );
     this.addITemToMenuIfNotAlreadyExist(
-      'Manga',
-      'event',
+      'Home',
+      'fa-home',
       '../../../../assets/icons/calendrier admin.svg',
-      '/manga/info',
+      '/',
     );
   }
 

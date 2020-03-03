@@ -9,6 +9,7 @@ import {map} from 'rxjs/operators';
 })
 export class MangaService {
 
+  // Use environement for url
   constructor(private http: HttpClient) {
   }
 
@@ -24,5 +25,10 @@ export class MangaService {
     return this.http.get(`http://localhost:4242/manga/${id}/${chapter}`).pipe(
       map((res: any) => res.imgs)
     );
+  }
+
+
+  getMangaList() {
+    return this.http.get(`http://localhost:4242/manga/`);
   }
 }

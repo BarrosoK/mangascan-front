@@ -6,7 +6,7 @@ import { ListComponent } from './list/list.component';
 import { InfoComponent } from './info/info.component';
 import { ChapterComponent } from './chapter/chapter.component';
 import {SharedModule} from '../../shared/shared.module';
-import {FlexModule} from '@angular/flex-layout';
+import {FlexLayoutModule, FlexModule} from '@angular/flex-layout';
 import {FormsModule} from '@angular/forms';
 
 
@@ -17,7 +17,8 @@ import {FormsModule} from '@angular/forms';
     MangaRoutingModule,
     SharedModule,
     FlexModule,
-    FormsModule
+    FormsModule,
+    FlexLayoutModule,
   ]
 })
 export class MangaModule { }
