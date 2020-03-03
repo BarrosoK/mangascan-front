@@ -81,7 +81,7 @@
 
 .mat-divider {
   border-top-color: $light-gray;
-  width: 80%;
+  width: 100%;
 }
 
 .sidenav-content {
@@ -104,6 +104,7 @@
   text-overflow: ellipsis;
   max-width: 245px;
   overflow: hidden;
+  font:400 15px/24px Roboto, "Helvetica Neue", sans-serif;
 }
 
 .sidenav-navigation {
@@ -117,6 +118,7 @@
   bottom: 10px;
   right: 5px;
 }
+
 
 .scrollbar-juicy-peach::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);

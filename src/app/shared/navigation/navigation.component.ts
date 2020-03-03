@@ -57,7 +57,7 @@ export class NavigationComponent implements OnInit {
   async ngOnInit() {
 
     this.addITemToMenuIfNotAlreadyExist(
-      'login',
+      'Login',
       'fa-sign-in-alt',
       '../../../../assets/icons/calendrier admin.svg',
       '/auth/login',

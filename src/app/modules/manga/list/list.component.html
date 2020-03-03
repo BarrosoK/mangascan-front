@@ -6,7 +6,7 @@
       <input [(ngModel)]="filterValue" matInput placeholder="">
     </label>
   </mat-form-field>
-  <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
-    <div *cdkVirtualFor="let item of mangaList | filter :filterValue" class="example-item" routerLink="/manga/info/{{item.id}}">{{(item.title) || 'Loading...'}}</div>
+  <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport list-group">
+    <div *cdkVirtualFor="let item of mangaList | filter :filterValue" class="example-item mat-divider" fxLayoutAlign="start center" routerLink="/manga/info/{{item.id}}">{{(item.title) || 'Loading...'}}</div>
   </cdk-virtual-scroll-viewport>
 </div>

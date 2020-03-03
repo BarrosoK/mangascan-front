@@ -61,8 +61,8 @@
               fxLayout="row"
               fxLayoutAlign="start center"
             >
-              <i class="fas {{item.icon}} ml-3" aria-hidden="true"></i>
-              <span [@animateText]="linkText ? 'show' : 'hide'" class="menu-text">{{ item.title  }}</span>
+              <i class="fas {{item.icon}} fa-fw mr-3" aria-hidden="true"></i>
+              <span [@animateText]="linkText ? 'show' : 'hide'" class="menu-text ml-3">{{ item.title  }}</span>
             </a>
           </mat-nav-list>
         </div>
